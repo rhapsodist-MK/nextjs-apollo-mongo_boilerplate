@@ -1,12 +1,12 @@
 import React from 'react'
 import { useQuery } from '@apollo/react-hooks';
-import gql from 'graphql-tag';
+import gql from 'graphql-tag'
 
 const JOBS_QUERY = gql`
   query {
     hello
   }
-`;
+`
 
 export default () => {
   const {loading, error, data} = useQuery(JOBS_QUERY)
@@ -14,7 +14,7 @@ export default () => {
   if (loading) return <div>loading...</div>
   return (
     <div>
-      haha
+      hahaddd
       { data.hello }
       <button />
     </div>
