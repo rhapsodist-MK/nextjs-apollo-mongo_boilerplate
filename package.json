@@ -10,6 +10,10 @@
     "apollo-client": "^2.6.8",
     "apollo-link-http": "^1.5.16",
     "apollo-server-express": "^2.11.0",
+    "babel-cli": "^6.26.0",
+    "babel-node": "^0.0.1-security",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "graphql": "^15.0.0",
@@ -24,7 +28,7 @@
     "react-dom": "^16.13.1"
   },
   "scripts": {
-    "dev": "nodemon -e js server/server.js",
+    "dev": "nodemon server/server.js --exec babel-node --presets env,stage-3",
     "build": "next build",
     "start": "NODE_ENV=production node server.js"
   }

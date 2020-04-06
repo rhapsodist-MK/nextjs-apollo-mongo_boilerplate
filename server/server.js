@@ -1,11 +1,11 @@
 // packages
-const next = require('next')
-const express = require('express')
-const bodyParser = require('body-parser')
-const { ApolloServer, gql } = require('apollo-server-express')
+import next from 'next'
+import express from 'express'
+import { ApolloServer, gql } from 'apollo-server-express'
+import bodyParser from 'body-parser'
 
 // our packages
-const mongoDB = require('./services/mongodb')
+import mongoDB from './services/mongodb'
 
 // next.js setup
 const port = parseInt(process.env.PORT, 10) || 3000
