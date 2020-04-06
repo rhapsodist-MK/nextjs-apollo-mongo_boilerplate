@@ -33,9 +33,14 @@ app.prepare().then(() => {
     server.get('/', (req, res) => {
       return app.render(req, res, '/', req.query)
     })
+
+    server.use('/about', require('./routes/about'))
     
     as.applyMiddleware({ app: server })
-    server.all('*', (req, res) => handle(req, res))
+    server.all('*', (req, res) => {
+      return app.render(req, res, req.target_nextApp, req.query)
+      handle(req, res)
+    })
     server.listen(port, err => {
       if (err) throw err
       console.log(`> Ready on http://localhost:${port}`)
