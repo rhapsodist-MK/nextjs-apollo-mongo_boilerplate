@@ -24,7 +24,7 @@
     "react-dom": "^16.13.1"
   },
   "scripts": {
-    "dev": "nodemon -e js server.js",
+    "dev": "nodemon -e js server/server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js"
   }

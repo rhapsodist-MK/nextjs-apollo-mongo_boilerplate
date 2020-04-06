@@ -14,7 +14,7 @@ export default () => {
   if (loading) return <div>loading...</div>
   return (
     <div>
-      hahaddd
+      hahadddkkkkkkkkkhahahah
       { data.hello }
       <button />
     </div>

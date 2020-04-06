@@ -3,5 +3,6 @@ const connection = process.env.MONGODB_URI || 'mongodb://localhost:27017/mongo-t
 
 // mongoose.Promise = global.Promise
 const connectDb = () => mongoose.connect(connection)
+console.log('db!!!!!!!!!!!!')
 
 module.exports = connectDb
