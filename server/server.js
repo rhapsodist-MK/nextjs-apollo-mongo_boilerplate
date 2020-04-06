@@ -29,8 +29,12 @@ app.prepare().then(() => {
   mongoDB().then(async () => {
     const server = express()
     const as = new ApolloServer({ typeDefs, resolvers })
+    
+    server.get('/', (req, res) => {
+      return app.render(req, res, '/', req.query)
+    })
+    
     as.applyMiddleware({ app: server })
-  
     server.all('*', (req, res) => handle(req, res))
     server.listen(port, err => {
       if (err) throw err
